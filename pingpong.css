@@ -1,0 +1,97 @@
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+:root{
+    --pri:rgb(150, 184, 222);
+    --border:rgb(130, 114, 114);
+    --uPaddle:rgb(164, 43, 140);
+    --aiPaddle:rgb(182, 145, 52);
+    --ball:blue;
+}
+#gamebox{
+    width:100vw;
+    height:100vh;
+    background-color:var(--pri);
+    position:relative;
+    text-align: center;
+    overflow: hidden;
+}
+.score{
+    color:var(--ball);
+    display: inline-block;
+    margin:10px;
+    font-size: 2rem;
+    margin-top:-8px;
+}
+
+#border{
+    height:100%;
+    border:dashed 2px var(--border);
+    position:absolute;
+    left:50%;
+    top:0;
+    transform: translate(-50%);
+}
+.paddle{
+    width:20px;
+    height:80px;
+    border-radius: 10px;
+    position:absolute;
+    top:50%;
+    transform:translate(0,-50%);
+}
+#userPaddle{
+    background-color: var(--uPaddle);
+    left:0;
+}
+#aiPaddle{
+    background-color:var(--aiPaddle) ;
+    right:0;
+}
+#ball{
+    height:20px;
+    width:20px;
+    background-color: var(--ball);
+    border-radius: 50%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+
+}
+#btn{
+    position:absolute;
+    left:50%;
+    bottom:0.5%;
+    transform:translate(-50%,0);
+    width:80px;
+    height:30px;
+    border-radius: 10px;
+    cursor:pointer;
+    background-color: var(--ball) ;
+    color:white;
+}
+#btn:hover{
+    background-color: white;
+    color:var(--ball);
+}
+#userMenu{
+    color:rgb(56, 28, 28);
+    background-color: rgb(233, 202, 207);
+    display: block;
+    position:absolute;
+    left:50%;
+    transform:translate(-50%,0);
+    width:200px;
+    top:75%;
+
+}
+@media (max-width:600px){
+    #userMenu{
+        color:rgb(95, 95, 130);
+        font-size:16px;
+    }
+}
